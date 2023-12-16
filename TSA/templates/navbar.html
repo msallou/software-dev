@@ -1,0 +1,44 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NavBar</title>
+    <link rel="stylesheet" href="{% static 'css/navbar.css' %}">
+</head>
+<body>
+    <a id="logo" href="/">
+        <h1>LOGO</h1>
+    </a>
+
+    {% if request.user.is_authenticated %}
+        <div class="dropdown">
+            <button class="menu">Menu</button>
+            <div class="content">
+                <a href="/logout">Sign Out</a>
+                <a href="/settings">Settings</a>
+            </div>
+        </div>
+
+        <div class="gradesDropdown">
+            <button class="gradesMenu">Grades</button>
+            <div class="gradesContent">
+                <a href="{% url 'kindergarten' %}">Kindergarten</a>
+                <a href="{% url 'grade1' %}">Grade 1</a>
+                <a href="{% url 'grade2' %}">Grade 2</a>
+                <a href="{% url 'grade3' %}">Grade 3</a>
+                <a href="{% url 'grade4' %}">Grade 4</a>
+                <a href="{% url 'grade5' %}">Grade 5</a>
+                <a href="{% url 'grade6' %}">Grade 6</a>
+                <a href="{% url 'grade7' %}">Grade 7</a>
+                <a href="{% url 'grade8' %}">Grade 8</a>
+            </div>
+        </div>
+
+    {% endif %}
+
+    <hr>
+</body>
+</html>

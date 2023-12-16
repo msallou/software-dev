@@ -1,0 +1,29 @@
+{% extends 'main.html'%}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intro to Multiplication</title>
+    <link rel="stylesheet" href="">
+    
+</head>
+<body>
+    {% block content %}
+    <h1>Intro to Multiplication</h1>
+
+    <h3 id="problem"></h3><br>
+    <label id="label">Answer: </label>
+    <input onfocus="this.value=''" type="text" id="userGuess"><br><br>
+    <button id="submit" type="button">Submit</button>
+    <button id="newNum" type="button">Generate New Numbers</button>
+
+    <h3 id="response"></h3>
+    <script src="{% static 'js/introToMultiplication.js' %}"></script>
+
+    {% endblock content %}
+
+    
+</body>
+</html>

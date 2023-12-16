@@ -1,0 +1,20 @@
+{% extends 'main.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade 3</title>
+</head>
+<body>
+    {% block content %}
+    <h1>Welcome to Grade 3</h1><br>
+    <a href="{% url 'introMultiplication' %}">Unit 1: Intro to multiplication</a><br>
+    <a href="">Unit 2: 1 digition multiplication</a><br>
+    <a href="">Unit 3: 2+ digit addition & subtraction</a><br>
+    <a href="">Unit 4: Intro to division</a><br>
+    <a href="">Unit 5: Intro to fractions</a><br>
+    <a href="">Unit 6: Area/Perimeter</a>
+    {% endblock content %}
+</body>
+</html>
